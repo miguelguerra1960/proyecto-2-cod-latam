@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el menú */
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 10px;
+}
+
+.menu a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.menu a:hover {
+  color: #ff0000;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .menu {
+    position: static;
+    top: auto;
+    right: auto;
+    text-align: center;
+  }
+
+    .menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 0;
+  background-color: rgb(69, 93, 230);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1vw;
+  text-align: center;
+}
+
+aside {
+  flex: 1;
+  background-color: beige;
+  padding: 2vw;
+}
+
+section {
+  flex: 3;
+  background-color: khaki;
+  padding: 2vw;
+}
+
+footer {
+  font-size: 4vw;
+  padding: 2vw;
+  text-align: center;
+  background-color: palevioletred;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.cajafoto {
+  width: 60vw;
+  max-width: 1000px;
+  min-width: 120px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: cornflowerblue;
+  padding: 2vw;
+  width: 20vw;
+  height: 20vw;
+  max-height: 400px;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+}
+
+.btn-1 {
+  display: block;
+  width: 10vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  background-color: rgb(127, 206, 255);
+  border-radius: 10px;
+  padding: 1vw;
+  margin: 1vw auto;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 2vw;
+  }
+
+  .row {
+    font-size: 2.5vw;
+  }
+
+  .cajafoto {
+    width: 70vw;
+    height: 70vw;
+    max-height: 300px;
+  }
+
+  .btn-1 {
+    width: 20vw;
+    padding: 1vw;
+    margin: 1vw auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1vw;
+  }
+
+  .row {
+    font-size: 2vw;
+  }
+}

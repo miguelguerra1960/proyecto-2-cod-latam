@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Guerra</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a
+            class="menu-link"
+            href="#paragraph1"
+            onclick="showContent('paragraph1')"
+            >Adelante</a
+          >
+        </li>
+        <li>
+          <a
+            class="menu-link"
+            href="#paragraph2"
+            onclick="showContent('paragraph2')"
+            >Atras</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <div class="cajafoto">
+        <img src="imagen/miguel guerra.jpg" alt="foto1" />
+      </div>
+
+      <h1>Miguel Angel Guerra Lara</h1>
+    </header>
+
+    <a class="btn-1" href="cv/miguelguerracv.pdf.pdf" target="_blank"
+      >Descargar CV</a
+    >
+
+    <div class="row">
+      <section>
+        <p id="paragraph1">
+          Mi formación técnica va enfocada al uso de las tecnologías integradas
+          hardware y software, programación y mantenimiento del sistema
+          integrado. Tengo una experiencia de 25 años en el sector. Reparo y
+          realizo mantenimiento de computadoras. Instalación de sistemas
+          operativos Windows 7, 8, 10, 11 paquetes de soporte como son office
+          365, e instalación de antivirus. Repotenciación a nivel lógico y
+          físico de computadoras.
+        </p>
+
+        <p id="paragraph2">
+          Cree Emci Computación, s.r.l como servicio Técnico de Computación
+          donde se realiza, ensamblaje, repotenciación, mantenimiento de
+          computadoras. Instalación de sistemas operativos, redes, paquetes
+          office de soporte, Configuración a nivel lógico y físico. Trabajé en
+          Adriática de seguros, c.a. con el cargo de: Operador AS/400. Trabajé
+          con pólizas de seguros de los productores. Realizaba backup del
+          sistema y envío de la data a la oficina principal. En la empresa
+          Resinglas trabajé como Subgerente Operación de facturación y compra de
+          suministros de planta, atención al público en ventas. Elaboración de
+          reporte mensual de planta para calcular el desperdicio de la
+          producción. "Con más de 25 años de experiencia en el campo de la
+          reparación de computadoras, he tenido el privilegio de presenciar y
+          adaptarme a la evolución constante de la tecnología. A lo largo de mi
+          carrera, he adquirido un profundo conocimiento de los componentes
+          internos de los ordenadores, así como de los sistemas operativos más
+          utilizados. Desde los primeros días de los equipos de escritorio hasta
+          la actualidad de las laptops ultradelgadas y los dispositivos móviles,
+          he enfrentado y resuelto una amplia gama de problemas técnicos. Mi
+          experiencia en reparación de computadoras me ha permitido diagnosticar
+          y solucionar con eficacia problemas de hardware y software."
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <div class="social-link">
+        <a href="https://twitter.com/MiguelG41791373" target="_blank"
+          ><i class="fab fa-twitter"></i>i</a
+        >
+        <a
+          href="https://www.linkedin.com/in/miguel-angel-guerra-lara-6172401b0"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+    <script>
+      // Código JavaScript interactivo
+      const btnDownload = document.querySelector(".btn-1");
+      btnDownload.addEventListener("click", function () {
+        //  alert("¡Descarga iniciada!");
+        // Aquí puedes agregar la lógica de descarga del archivo
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        var nuevoTexto =
+          "Con más de 25 años de experiencia en el campo de la reparación de computadoras, he tenido el privilegio de presenciar y adaptarme a la evolución constante de la tecnología. A lo largo de mi carrera, he adquirido un profundo conocimiento de los componentes internos de los ordenadores, así como de los sistemas operativos más utilizados. Desde los primeros días de los equipos de escritorio hasta la actualidad de las laptops ultradelgadas y los dispositivos móviles, he enfrentado y resuelto una amplia gama de problemas técnicos. Mi experiencia en reparación de computadoras me ha permitido diagnosticar y solucionar con eficacia problemas de hardware y software.";
+
+        document.getElementById("paragraph1").textContent =
+          "Soy un profesional apasionado por el mundo de las redes de informática y poseo un sólido conocimiento en esta área. A lo largo de mi carrera, he adquirido habilidades y experiencia en el diseño, implementación y mantenimiento de redes, asegurando un rendimiento óptimo y una conectividad confiable para las organizaciones. Mis conocimientos en redes de informática y mi experiencia en la implementación y administración de redes me han permitido asegurar un rendimiento eficiente, una conectividad confiable y una mayor seguridad en los entornos empresariales. Estoy comprometido a mantenerme actualizado en las últimas tecnologías y estándares de redes, y me entusiasma aplicar mis habilidades para contribuir al éxito de tu organización.";
+
+        // var otroTexto = "Cree Emci Computación, s.r.l como servicio Técnico de Computación donde se realiza, ensamblaje, repotenciación, mantenimiento de computadoras.";
+
+        document.getElementById("paragraph2").textContent = otroTexto;
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuLinks = document.querySelectorAll(".menu");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetParagraph = document.getElementById(targetId);
+            const nuevoTexto = "Nuevo contenido para el párrafo " + targetId;
+            targetParagraph.textContent = nuevoTexto;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
